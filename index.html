@@ -5,7 +5,129 @@
 	<title>Домашнее задание 1</title>
 </head>
 <body>
-	<h2>Ответы на домашне задание №1</h2>
-	<script src="Lesson-JS-1.js"></script>
+	<h2>Ответы на домашне задание №2</h2>
+	<script>
+		var a = 1, b = 1, c, d;
+		c = ++a; alert(c);
+		// 2 в этом случае мы к переменной а прибавляем единицу.
+		d = b++; alert(d);
+		// 1 в этом случае мы прибавляем единицу, но выводим предыдущее значение переменной.
+		c = (2+ ++a); alert(c);
+		// 5 в первом примере мы прибавили единицу в переменную а - ее значение стало равно 2. Мы прибавляем еще единицу и а становится равно 3, после чего прибавляем 2 и получается 5.
+		d = (2+ b++); alert(d);
+		// 4 во втором примере мы прибавили единицу в переменную b ее значение стало равно 2. Мы прибавляем еще единицу и b становится равно 3, но выводим предыдущее значение т.е. 2 и прибавляем 2 - получается 4.
+		alert(a);
+		// 3 прибавили единицу в примерах 1 и 3
+		alert(b);
+		// 3 прибавили единицу в примерах 2 и 4
+	</script>
+	<script>
+		var a = 2;
+		var x = 1 + (a *= 2);
+		// *= это сокращенный оператор. Полный вид х = 1 + (а = а * 2). х = 1 + ( 2 * 2 ) итог х = 5
+ 	</script>
+ 	<script>
+ 		var a = 7;
+		var b = 2;
+		if (a > 0 && b > 0){
+		c = a - b;
+		alert(c);
+		} else if (a < 0 && b < 0){
+			c = a * b;
+			alert (c);
+			}
+		  	else if (a > 0 && b < 0 || a < 0 && b > 0) {
+		  	c = a + b;
+		  	alert (c);
+		  	}
+ 	</script>
+ 	<script>
+		a = +prompt ('Введите число от 1 до 15');
+		switch (a) {
+		case 1:
+			alert ('Число 1');
+			break;
+		case 2:
+			alert ('Число 2');
+			break;
+		case 3:
+			alert ('Число 3');
+			break;
+		case 4:
+			alert ('Число 4');
+			break;
+		case 5:
+			alert ('Число 5');
+			break;
+		case 6:
+			alert ('Число 6');
+			break;
+		case 7:
+			alert ('Число 7');
+			break;
+		case 8:
+			alert ('Число 8');
+			break;
+		case 9:
+			alert ('Число 9');
+			break;
+		case 10:
+			alert ('Число 10');
+			break;
+		case 11:
+			alert ('Число 11');
+			break;
+		case 12:
+			alert ('Число 12');
+			break;
+		case 13:
+			alert ('Число 13');
+			break;
+		case 14:
+			alert ('Число 14');
+			break;
+		case 15:
+			alert ('Число 15');
+			break;
+		}
+ 	</script>
+ 	<script>
+ 		var a = 1;
+		var b = 2;
+
+		function plus(a, b) {
+    		return a + b;
+		}
+
+		function minus(a, b) {
+    		return a - b;
+		}
+
+		function div (a, b) {
+    		return a / b;
+		}
+
+		function mult (a, b) {
+    		return a + b;
+		}
+ 	</script>
+ 	<script>
+ 		function mathOperation(arg1, arg2, operation) {
+    		switch(operation) {
+   				case 'сложение':
+       				return arg1 + arg2;
+       				break;
+   				case 'вычитание':
+       				return arg1 - arg2;
+        			break;
+    			case 'деление':
+                  	return arg1 / arg2;
+        			break;
+   				case 'умножение':
+       				return arg1 * arg2;
+        			break;
+   			}
+		}
+ 	</script>
 </body>
 </html>
