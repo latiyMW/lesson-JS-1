@@ -5,45 +5,47 @@
 	<title>Домашнее задание 2</title>
 </head>
 <body>
-	<h2>Ответы на домашне задание №3</h2>
+	<h2>Ответы на домашне задание №4 (долг по предыдущему заданию)</h2>
 	<script>
-	let a = 1;
-    let b = [];
-
-    while (a <= 100) {
-        if (a == 1) {
-            b.push(1)
+        console.log('Ответ задача 1');
+        let max = 999;
+        let digit = {
+	        number: Math.round(Math.random() * max),
+	        units: 0,
+	        tens: 0,
+	        hundreds: 0,
+        };
+        if  (digit.number <= 9){
+            digit.units = digit.number;
+        } else if (digit.number <= 999){
+            digit.units = Math.floor(digit.number % 10);
+            digit.tens = Math.floor(digit.number / 10 % 10);
+            digit.hundreds = Math.floor(digit.number / 100 % 10);
         } else {
-            let result = 2;
-            let i = 2;
-            while (a % i !== 0 ){
-                i += 1;
-                result +=1;
-                }
-            if (result == a) {
-                b.push(result);
-            }
+            digit.number = 0;
+            console.log('Вы ввели число за диапазоном 0 - 999');
         }
-        a += 1;
-    }
+        console.log(digit);
+    </script>
 
-    console.log(b);
-	</script>
 	<script>
-		function countBasketPrice(basket){
-		    let sum = 0;
-
-		    for(let i = 0; i < basket.length; i++){
-		        sum = sum + basket[i][1];
-		    }
-		    return sum;
+		let basket = {
+			products: [],
+			countBasketPrice: function(){
+				let sum = 0;
+				for (let i = 0; i < this.products.length; i++){
+					sum = sum + this.products[i].price * this.products[i].count;
+				}
+				return sum;
+			}
 		}
-
-		var basket = [["Барабаны" , 50000], ["Тарелки", 30000], ["Палочки", 1000]];
-
-		a = countBasketPrice(basket);
-
-		console.log("сумма корзины: " + a);
- 	</script>
+		let products = [
+			{name: "Барабаны", price: 50000, count: 2},
+			{name: "Тарелки", price: 30000, count: 1},
+			{name: "Палочки", price: 1000, count: 1},
+		];
+		basket.products = products;
+		console.log("сумма корзины: " + basket.countBasketPrice());
+	</script>
 </body>
 </html>
